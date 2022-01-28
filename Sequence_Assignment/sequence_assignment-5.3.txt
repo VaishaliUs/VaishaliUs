@@ -1,0 +1,104 @@
+1. Read a single digit number and write the number in word using Case
+ans:
+
+echo "Enter a Number"
+read number
+case $number in
+        1)
+      echo "One";;
+        2)
+       echo "Two" ;;
+        3)
+     echo "Three";;
+       4)
+      echo "Four";;
+        5)
+       echo "Five";;
+        6)
+       echo "Six";;
+       7)
+   echo "Seven";;
+        8)
+     echo "Eight";;
+      9)
+       echo "nine";;
+*)
+echo "not a valid input";;
+esac
+
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash singledigit_case.sh
+Enter a Number
+2
+Two
+
+
+***********************************************************************************
+
+2. Read a Number and Display the week day (Sunday, Monday,...)
+ans.
+
+echo "Enter a Number"
+read number
+case $number in
+        1)
+      echo "Sunday";;
+        2)
+       echo "Monday" ;;
+        3)
+     echo "Tuesday";;
+       4)
+      echo "wednesday";;
+        5)
+       echo "Thursday";;
+        6)
+       echo "Friday";;
+       7)
+   echo "Saturday";;
+*)
+echo "Number Not matched";;
+esac
+
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash weekdays_case.sh
+Enter a Number
+7
+Saturday
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash weekdays_case.sh
+Enter a Number
+8
+Number Not matched
+
+***********************************************************************************
+
+3.Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+ans:
+
+echo "Enter a Number"
+read number
+case $number in
+        1)
+      echo "Unit";;
+        10)
+       echo "Ten" ;;
+        100)
+     echo "Hundred";;
+       1000)
+      echo "Thousand";;
+        
+*)
+echo "Match Not Found";;
+esac
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash displayunit_case.sh
+Enter a Number
+10
+Ten
+
+***********************************************************************************
+

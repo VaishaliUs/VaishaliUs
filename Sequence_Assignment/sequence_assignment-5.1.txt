@@ -1,0 +1,146 @@
+ans:
+
+echo "Five random Numbers"
+Num1=$((100+RANDOM%900))
+Num2=$((100+RANDOM%900))
+Num3=$((100+RANDOM%900))
+Num4=$((100+RANDOM%900))
+Num5=$((100+RANDOM%900))
+echo "Num1="$Num1
+echo "Num2="$Num2
+echo "Num3="$Num3
+echo "Num4="$Num4
+echo "Num5="$Num5
+if [ $Num1 -gt $Num2 -a $Num1 -gt $Num3 ]
+then
+echo "maximum= "$Num1
+elif [ $Num2 -gt $Num1 -a $Num2 -gt $Num3 ]
+then
+echo "maximum= "$Num2
+elif [ $Num3 -gt $Num2 -a $Num3 -gt $Num4 ]
+then
+echo "maximum= "$Num3
+elif [ $Num4 -gt $Num3 -a $Num3 -gt $Num5 ]
+then
+echo "maximum is= "$Num4
+else
+echo "maximum is= "$Num5
+fi
+if [ $Num1 -lt $Num2 -a $Num1 -lt $Num3 ]
+then
+echo "minimum is= "$Num5
+elif [ $Num2 -lt $Num1 -a $Num2 -lt $Num3 ]
+then
+echo "minimum is= "$Num2
+elif [ $Num3 -lt $Num2 -a $Num3 -lt $Num4 ]
+then
+echo "minimum is= "$Num3
+elif [ $Num4 -lt $Num3 -a $Num3 -lt $Num5 ]
+then
+echo "minimum is= "$Num4
+else
+echo "minimum is= "$Num5
+fi
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash 3digit.sh
+Five random Numbers
+Num1=494
+Num2=536
+Num3=109
+Num4=985
+Num5=761
+maximum is= 536
+minimum is= 109
+
+
+
+********************************************************************************************
+
+2.Write a program that takes day and month from the command line and prints true if
+day of month is between March 20 and June 20, false otherwise.
+
+ans:
+read -p " Enter Date:-" Date
+read -p " Enter Month:-" Month
+
+if [ $Month -gt 3 -a $Month -lt 6  -a  $Date -le 31 -a $Date -ge 1 ]
+then
+        echo $Date $Month "True"
+
+elif [ $Month -eq 3 -a $Date -ge 20 -a $Date -le 31 ]
+then
+        echo $Date $Month "True"
+
+elif [ $Month -eq 6 -a $Date -le 20 -a $Date -ge 1 ]
+then
+        echo $Date $Month "True"
+
+else
+        echo "False! Please Enter date between March 20 and June 20"
+fi
+
+********************************************************************************************
+
+3.Write a program that takes a year as input and outputs the Year is a Leap Year or not
+a Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
+divisible by 400.
+
+ans:
+echo -n "Enter year (YYYY): "
+read y
+a = 'expr $y%4'
+b = 'expr $y%100'
+c = 'expr $y%400'
+if[$a -eq 0 -a $b -ne - -o $c -eq 0]
+then 
+echo "$y is leap year"
+else
+echo "$y is not a leap year"
+
+fi
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash leapyear.sh
+enter the year :
+2021
+2021 is not leap year
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash leapyear.sh
+enter the year :
+2012
+2012 is leap year
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash leapyear.sh
+enter the year :
+2020
+2020 is leap year
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash leapyear.sh
+enter the year :
+1800
+1800 is not leap year
+
+********************************************************************************************
+4.Write a program to simulate a coin flip and print out "Heads" or "Tails" accordingly.
+ans:
+
+coinflip=$(($(($RANDOM%10))%2))
+if [ $coinflip -eq 1 ];then
+    echo "heads"
+else
+    echo "tails"
+fi
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash flip.sh
+heads
+
+Asus@LAPTOP-ORL11CNO MINGW64 /d/vaishu/gitbash (main)
+$ bash flip.sh
+tails
+
+*************************************************************************************
