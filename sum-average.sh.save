@@ -1,7 +1,0 @@
-read-p "Enter first number:"
-read-p "Enter second number:"
-read-p "Enter third number:"
-read-p "Enter fourth number:"
-read-p "Enter fifth number:"
-
-sum=$(())
