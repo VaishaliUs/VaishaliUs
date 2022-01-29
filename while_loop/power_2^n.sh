@@ -1,5 +1,3 @@
-#! /bin/bash
-
 read -p "Enter the nth number:"  number
 
 counter=0
